@@ -3,8 +3,7 @@
 #include "BinaryTree.h"
 
 
-template <class k, class v>
-
 class Treemap {
+	
 
 };
