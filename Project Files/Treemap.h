@@ -24,3 +24,9 @@ public:
 	V& operator[](K key);
 	~Treemap();
 };
+
+template <class K, class V>
+void Treemap<K, V>::clear() {
+	BT.clear();
+};
+
