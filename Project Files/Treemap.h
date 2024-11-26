@@ -51,7 +51,8 @@ bool Treemap<K, V>::containsKey(K key) {
 
 template <class K, class V>
 V& Treemap<K, V>::get(K key) {
-
+	Pair<K, V> searchKey = { key, V() };
+	return BT.get(searchKey).value;
 }
 
 template<class K, class V>
