@@ -37,5 +37,10 @@ bool Treemap<K, V>::containsKey(K key) {
 	return found != nullptr;
 }
 
+template <class K, class V>
+V& Treemap<K, V>::get(K key) {
+
+}
+
 
 
