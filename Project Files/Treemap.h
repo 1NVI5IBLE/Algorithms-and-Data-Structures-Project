@@ -32,9 +32,9 @@ void Treemap<K, V>::clear() {
 
 template <class K, class V>
 bool Treemap<K, V>::containsKey(K key) {
-	Pair<K, V> newPair = { key, V()};
-	Pair<K, V>* found = tree.get(searchKey);
-	return found != nullptr
+	Pair<K, V> searchKey = { key, V()};
+	Pair<K, V>* found = BT.get(searchKey);
+	return found != nullptr;
 }
 
 
