@@ -25,6 +25,18 @@ public:
 	~Treemap();
 };
 
+
+template<class K, class V>
+Treemap<K, V>::Treemap() {
+
+}
+
+template<class K, class V>
+Treemap<K, V>::Treemap(const Treemap<K, V>& other) {
+
+}
+
+
 template <class K, class V>
 void Treemap<K, V>::clear() {
 	BT.clear();
