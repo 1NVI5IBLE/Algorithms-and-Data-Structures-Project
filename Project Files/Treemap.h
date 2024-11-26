@@ -42,5 +42,35 @@ V& Treemap<K, V>::get(K key) {
 
 }
 
+template<class K, class V>
+BinaryTree<K> Treemap<K, V>::keySet() {
+
+}
+
+template<class K, class V>
+void Treemap<K, V>::put(K key, V value) {
+
+}
+
+template<class K, class V>
+int Treemap<K, V>::size() {
+
+}
+
+template<class K, class V>
+bool Treemap<K, V>::removeKey(K key) {
+
+}
+
+template<class K, class V>
+V& Treemap<K, V>::operator[](K key) {
+
+}
+
+template<class K, class V>
+Treemap<K, V>::~Treemap() {
+
+}
+
 
 
