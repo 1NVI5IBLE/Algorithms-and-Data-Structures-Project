@@ -15,7 +15,7 @@ public:
 	Treemap<K, V>& operator=(const Treemap <K, V>& other);
 
 	void clear();
-	void containsKey(K key);
+	bool containsKey(K key);
 	V& get(K key);
 	BinaryTree<K> keySet();
 	void put(K key, V value);
@@ -29,4 +29,13 @@ template <class K, class V>
 void Treemap<K, V>::clear() {
 	BT.clear();
 };
+
+template <class K, class V>
+bool Treemap<K, V>::containsKey(K key) {
+	Pair<K, V> newPair = { key, V()};
+	Pair<K, V>* found = tree.get(searchKey);
+	return found != nullptr
+}
+
+
 
