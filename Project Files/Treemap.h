@@ -67,7 +67,7 @@ void Treemap<K, V>::put(K key, V value) {
 
 template<class K, class V>
 int Treemap<K, V>::size() {
-
+	return BT.count();
 }
 
 template<class K, class V>
