@@ -72,10 +72,11 @@ void Treemap<K, V>::put(K key, V value) {
 	try
 	{
 		Pair<K, V> searchKey(key, V());
+		TM.add(searchKey)
 	}
 	catch (const std::logic_error&)
 	{
-
+		throw std::logic_error("Key wasnt added!")
 	}
 };
 
