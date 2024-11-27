@@ -72,10 +72,8 @@ void Treemap<K, V>::put(K key, V value) {
 	try
 	{
 		Pair<K, V> searchKey(key, V());
-		
-
 	}
-	catch (const std::exception&)
+	catch (const std::logic_error&)
 	{
 
 	}
