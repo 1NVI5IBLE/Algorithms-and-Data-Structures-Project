@@ -44,7 +44,7 @@ void Treemap<K, V>::clear() {
 
 template <class K, class V>
 bool Treemap<K, V>::containsKey(K key) {
-	Pair<K, V> searchKey = { key, V() };
+	Pair<K, V> searchKey( key, V());
 	Pair<K, V>* found = TM.get(searchKey);
 	return found != nullptr;
 };
@@ -61,7 +61,7 @@ BinaryTree<K> Treemap<K, V>::keySet() {
 
 template<class K, class V>
 void Treemap<K, V>::put(K key, V value) {
-
+	
 };
 
 template<class K, class V>
@@ -71,7 +71,16 @@ int Treemap<K, V>::size() {
 
 template<class K, class V>
 bool Treemap<K, V>::removeKey(K key) {
-	
+	try
+	{	
+		//V temp()
+		Pair<K, V> searchKey( key, V());
+		TM.remove(searchKey);
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << "Error: Couldn't remove key" << e.watch() << std::endl;
+	}
 };
 
 template<class K, class V>
