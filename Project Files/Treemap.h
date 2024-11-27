@@ -51,7 +51,15 @@ bool Treemap<K, V>::containsKey(K key) {
 
 template <class K, class V>
 V& Treemap<K, V>::get(K key) {
-	
+	try
+	{
+		Pair<K, V> searchKey(key, V());
+		return TM.get(searchKey).value;
+	}
+	catch (const std::logic_error&)
+	{
+		throw std::logic_error("Key wasnt found!")
+	}
 };
 
 template<class K, class V>
@@ -61,7 +69,16 @@ BinaryTree<K> Treemap<K, V>::keySet() {
 
 template<class K, class V>
 void Treemap<K, V>::put(K key, V value) {
-	
+	try
+	{
+		Pair<K, V> searchKey(key, V());
+		
+
+	}
+	catch (const std::exception&)
+	{
+
+	}
 };
 
 template<class K, class V>
@@ -77,15 +94,15 @@ bool Treemap<K, V>::removeKey(K key) {
 		Pair<K, V> searchKey( key, V());
 		TM.remove(searchKey);
 	}
-	catch (const std::exception& e)
+	catch (const std::logic_error&)
 	{
-		std::cout << "Error: Couldn't remove key" << e.watch() << std::endl;
+		throw std::logic_error("Key wasnt removed!")
 	}
 };
 
 template<class K, class V>
 V& Treemap<K, V>::operator[](K key) {
-
+	return get(key)
 };
 
 template<class K, class V>
