@@ -6,7 +6,7 @@
 template<class K, class V>
 
 class Treemap {
-	BinaryTree<Pair<K, V>> BT;
+	BinaryTree<Pair<K, V>> TM;
 
 
 public:
@@ -39,20 +39,20 @@ Treemap<K, V>::Treemap(const Treemap<K, V>& other) {
 
 template <class K, class V>
 void Treemap<K, V>::clear() {
-	BT.clear();
+	TM.clear();
 };
 
 template <class K, class V>
 bool Treemap<K, V>::containsKey(K key) {
 	Pair<K, V> searchKey = { key, V()};
-	Pair<K, V>* found = BT.get(searchKey);
+	Pair<K, V>* found = TM.get(searchKey);
 	return found != nullptr;
 }
 
 template <class K, class V>
 V& Treemap<K, V>::get(K key) {
 	Pair<K, V> searchKey = { key, V() };
-	return BT.get(searchKey).value;
+	return TM.get(searchKey).value;
 }
 
 template<class K, class V>
@@ -67,12 +67,12 @@ void Treemap<K, V>::put(K key, V value) {
 
 template<class K, class V>
 int Treemap<K, V>::size() {
-	return BT.count();
+	return TM.count();
 }
 
 template<class K, class V>
 bool Treemap<K, V>::removeKey(K key) {
-
+	
 }
 
 template<class K, class V>
