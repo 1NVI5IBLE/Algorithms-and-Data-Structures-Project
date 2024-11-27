@@ -117,7 +117,7 @@ V& Treemap<K, V>::operator[](K key) {
 
 template<class K, class V>
 Treemap<K, V>::~Treemap() {
-
+	clear();
 };
 
 
