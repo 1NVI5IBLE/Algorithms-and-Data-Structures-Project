@@ -83,14 +83,11 @@ BinaryTree<K> Treemap<K, V>::keySet() {
 
 template<class K, class V>
 void Treemap<K, V>::put(K key, V value) {
-	try
-	{
-		Pair<K, V> searchKey(key, V());
-		TM.add(searchKey);
+	if (containsKey(key)) {
+		get(key) = value;
 	}
-	catch (const std::logic_error&)
-	{
-		throw std::logic_error("Key wasnt added!");
+	else {
+		TM.add(Pair<K, V>(key, value));
 	}
 };
 
