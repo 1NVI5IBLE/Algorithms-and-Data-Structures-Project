@@ -29,12 +29,12 @@ public:
 template<class K, class V>
 Treemap<K, V>::Treemap() {
 
-}
+};
 
 template<class K, class V>
 Treemap<K, V>::Treemap(const Treemap<K, V>& other) {
 
-}
+};
 
 
 template <class K, class V>
@@ -44,46 +44,45 @@ void Treemap<K, V>::clear() {
 
 template <class K, class V>
 bool Treemap<K, V>::containsKey(K key) {
-	Pair<K, V> searchKey = { key, V()};
+	Pair<K, V> searchKey = { key, V() };
 	Pair<K, V>* found = TM.get(searchKey);
 	return found != nullptr;
-}
+};
 
 template <class K, class V>
 V& Treemap<K, V>::get(K key) {
-	Pair<K, V> searchKey = { key, V() };
-	return TM.get(searchKey).value;
-}
+	
+};
 
 template<class K, class V>
 BinaryTree<K> Treemap<K, V>::keySet() {
 
-}
+};
 
 template<class K, class V>
 void Treemap<K, V>::put(K key, V value) {
 
-}
+};
 
 template<class K, class V>
 int Treemap<K, V>::size() {
 	return TM.count();
-}
+};
 
 template<class K, class V>
 bool Treemap<K, V>::removeKey(K key) {
 	
-}
+};
 
 template<class K, class V>
 V& Treemap<K, V>::operator[](K key) {
 
-}
+};
 
 template<class K, class V>
 Treemap<K, V>::~Treemap() {
 
-}
+};
 
 
 
