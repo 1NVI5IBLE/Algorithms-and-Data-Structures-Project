@@ -44,9 +44,16 @@ void Treemap<K, V>::clear() {
 
 template <class K, class V>
 bool Treemap<K, V>::containsKey(K key) {
-	Pair<K, V> searchKey( key, V());
-	Pair<K, V>* found = TM.get(searchKey);
-	return found != nullptr;
+	Pair<K, V> searchKey(key, V());
+	try
+	{
+		TM.get(searchKey)
+			return true;
+	}
+	catch (const std::logic_error&)
+	{
+		return false;
+	}
 };
 
 template <class K, class V>
@@ -64,7 +71,14 @@ V& Treemap<K, V>::get(K key) {
 
 template<class K, class V>
 BinaryTree<K> Treemap<K, V>::keySet() {
-
+	BinaryTree<K> keys;
+	T* pairs = TM.toArray();
+	int size = TM.count();
+	for (int i = 0; i < size; i++) {
+		keys.add(pairs[i].key)
+	}
+	delete[] pairs;
+	return keys;
 };
 
 template<class K, class V>
@@ -101,7 +115,7 @@ bool Treemap<K, V>::removeKey(K key) {
 
 template<class K, class V>
 V& Treemap<K, V>::operator[](K key) {
-	return get(key)
+	return get(key);
 };
 
 template<class K, class V>
