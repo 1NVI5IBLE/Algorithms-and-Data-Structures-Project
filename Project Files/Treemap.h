@@ -103,15 +103,19 @@ bool Treemap<K, V>::removeKey(K key) {
 		//V temp()
 		Pair<K, V> searchKey( key, V());
 		TM.remove(searchKey);
+		return true;
 	}
 	catch (const std::logic_error&)
 	{
-		throw std::logic_error("Key wasnt removed!");
+		return false;
 	}
 };
 
 template<class K, class V>
 V& Treemap<K, V>::operator[](K key) {
+	if (!containsKey(key)) {
+		put(key, V());
+	}
 	return get(key);
 };
 
